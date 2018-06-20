@@ -15,7 +15,6 @@ import com.rokid.mobile.sdk.demo.SDKDemoActivity
 import com.rokid.mobile.sdk.webkit.SDKWebview
 import com.rokid.mobile.webview.lib.bean.TitleBarButton
 import java.lang.ref.WeakReference
-import java.util.logging.Logger
 
 /**
  * Description: TODO
@@ -152,6 +151,9 @@ class DemoWebview : SDKWebview {
     override fun errorView(state: Boolean, retryUrl: String) {
     }
 
+    override fun showLoading(message: String) {
+    }
+
     override fun hideLoading() {
     }
 
@@ -165,9 +167,6 @@ class DemoWebview : SDKWebview {
     }
 
     override fun setTitleBarStyle(style: String) {
-    }
-
-    override fun showLoading(message: String) {
     }
 
     override fun showToast(message: String) {

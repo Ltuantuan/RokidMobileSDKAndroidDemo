@@ -206,15 +206,16 @@ class DeviceBinderFragment : BaseFragment() {
                 }
             }
 
-            override fun onSendFailed(p0: BTDeviceBean?, p1: BleException?) {
+            override fun onSendFailed(btDeviceBean: BTDeviceBean?, bleException: BleException?) {
                 Logger.e("SendFailed -----------------")
                 this@DeviceBinderFragment.activity.runOnUiThread {
                     Toast.makeText(this@DeviceBinderFragment.activity,
-                            "发送数据失败 errorCode=" + (p0 ?: "") + "errorMsg= " + (p1 ?: ""),
-                            Toast.LENGTH_LONG).show()
+                            "发送数据失败 ${bleException.toString()}", Toast.LENGTH_LONG).show()
                 }
             }
+
         })
+
     }
 
 }

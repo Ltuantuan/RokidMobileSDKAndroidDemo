@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.ProgressBar
 import com.rokid.mobile.lib.base.util.CollectionUtils
 import com.rokid.mobile.lib.base.util.Logger
-import com.rokid.mobile.lib.entity.event.device.EventDeviceStatus
 import com.rokid.mobile.lib.entity.event.device.EventDeviceSysUpdate
 import com.rokid.mobile.lib.xbase.device.callback.IPingDeviceCallback
 import com.rokid.mobile.lib.xbase.device.callback.IUnbindDeviceCallback
@@ -62,11 +61,11 @@ class DeviceListFragment : BaseFragment() {
             }
             Logger.i("onItemClick position=" + sectionItemPosition + " deviceId=" + deviceItem.data.deviceId)
             toast(deviceItem.data.toString())
-//            getDeviceStatus(deviceItem.data)
         }
     }
 
     fun getDeviceItemList() {
+
         progressBar.visibility = View.VISIBLE
         mRecycler.visibility = View.GONE
         mAdapter.clearAllItemView()
